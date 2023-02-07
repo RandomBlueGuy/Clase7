@@ -1,31 +1,158 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
 :root{
-    --Color_name: #000000;   
+    --Red: hsl(1, 90%, 64%);
+    --Blue: hsl(219, 85%, 26%);
+    --White: hsl(0, 0%, 100%);
+    --VLGB: hsl(210, 60%, 98%);
+    --LGB1: hsl(211, 68%, 94%);
+    --LGB2: hsl(205, 33%, 90%);
+    --GB: hsl(219, 14%, 63%);
+    --DGB: hsl(219, 12%, 42%);
+    --VDB: hsl(224, 21%, 14%);
+
 }
 
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+ 
 html, body {
     height: 100%;
+}
+
+h2 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    color: var(--VDB);
+    font-size: 24px;
+}
+
+p {
+    font-weight: 400;
+    color: var(--DGB);
+    font-size: 15px;
 }
 
 body {
     padding: 0;
     margin: 0;
     display: flex;
-
-}
-
-.main_container {
-    display: flex;
-    width: 100%;
-    height:100%;
-    background-color: black;
+    font-family: 'Kumbh Sans', sans-serif;
     justify-content: center;
     align-items: center;
+    background-color: #eeeeee;
 }
-.card {
-    display: flex;
-    width: 50px;
-    height: 50px;
 
-    background-color:white;
+
+.main_container {
+    display:flex;
+    width: 90%;
+    height: 90%;
+    justify-content: center;
+    align-items: center;
+    background-color: #3a98a1;
+    background-image: url(Resources/bg-pattern-top.svg) , url(Resources/bg-pattern-bottom.svg);
+    background-repeat: no-repeat , no-repeat;
+    background-size: 60%;
+    background-position: right 50vw bottom 40vh , left 50vw top 50vh;
+}
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 400px;
+        height: 62vh;
+        max-height: 500px;
+        background-color: var(--White);
+        border-radius: 20px;
+        overflow: hidden;
+        max-width: 90%;
+        box-shadow: 10px 10px 40px rgba(0,0,0,0.2);
+    }
+
+        .content {
+            width:100%;
+            position: relative;
+            display:flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            
+        }
+
+            .bg_user{
+                background-image: url(Resources/bg-pattern-card.svg);
+                height: 25vh;
+                width: 100%;
+                max-height: 200px;
+            }
+
+            .user_data{
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 25vh;
+                max-height: 200px;
+                /*padding-top:2rem;*/
+            }
+
+
+            .user_data h2 span{
+                font-weight: 400;
+                color: var(--GB);
+            }
+
+
+            .content img {
+                position: absolute;
+                border-radius: 50%;
+                border: 7px solid var(--White);
+            }
+        
+        .numbers {
+            display: flex;
+            width: 100%;
+            height: 20vh;
+            justify-content: space-evenly;
+            text-align: center;
+            border-top: 2px solid var(--LGB1);
+        }
+
+        .numbers h2 {
+            margin-bottom: 0;
+        }
+
+        .numbers p {
+            font-size: 80%;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 0;
+            }
+
+            .likes p{
+                display: flex;
+                flex-direction: column;
+            }
+
+            .photos p{
+                display: flex;
+                flex-direction: column;
+            }
+
+@media (max-width: 376px) {
+    .main_container{
+        width:100%;
+        height: 100%;
+        background-size: 200%;
+        background-position: right 50vw bottom 50vh , left 40vw top 50vh;
+    }
 }
