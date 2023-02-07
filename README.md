@@ -27,7 +27,11 @@ NOTA: Pueden usar imagen y sus datos en vez de los sugeridos en el diseño.
 ​
 ### Screenshot
 ​
-![](./images/mobile.jpg)
+<div align=”center”>
+  <img src="Resources/Captura1.png" width="500", align="center" />
+  <img src="Resources/Captura2.png" width="500", align="center" />
+</div>
+
 ​
 ​
 ​
