@@ -50,8 +50,8 @@ body {
 
 .main_container {
     display:flex;
-    width: 90%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
     justify-content: center;
     align-items: center;
     background-color: #3a98a1;
